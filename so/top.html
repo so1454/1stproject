@@ -11,14 +11,15 @@
 
 <body>
     <!-- header (머리 카테고리 있는 쪽)-->
+
     <header>
         <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
         <div class="logo">
-            <img src="/작은 로고.png" alt="로고" width="80px">
+            <img src="/so/img/로고.png" alt="로고" width="100px">
         </div>
         <nav class="header-items">
             <ul>
-                <li class="header-item"><a href="#">영화  </a></li>
+                <li class="header-item"><a href="#">영화 </a></li>
                 <li class="header-item"><a href="#"> TV쇼 </a></li>
                 <li class="header-item"><a href="#"> 커뮤니티</a></li>
             </ul>
@@ -30,25 +31,52 @@
             <span class="search_btn">
                 <input type="text" placeholder="검색어 입력">
 
-                <button ><img src="/search.png" alt="search" width = "13px">
+                <button><img src="/so/img/search.png" alt="search" width="13px">
                 </button>
             </span>
 
-            <button id=login_btn>로그인</button>
+            <button id="login_btn">로그인</button>
 
         </div>
     </header>
 
-    <!-- 영상들어가는 쪽 -->
+    <!-- 메인 -->
     <main>
 
-        <section class = "background">
-            <div class = "backdrop"></div>
-
-
+        <!--상단 이미지-->
+        <section id="top_img">
+            <div class="background">
+            </div>
+            <div class="background_blur">
+            </div>
         </section>
 
 
+        <!-- 왼쪽-->
+        <div class = contents_wrap>
+            <section class="poster_img">
+
+                <img src="/so/img/다운로드.jfif" width="100%">
+                <ul class="information">
+                    <li>평점 </li>
+                    <li>장르 </li>
+                    <li>연령 </li>
+                </ul>
+
+            </section>
+
+            <!-- 오른쪽  -->
+            <section class="information_R">
+
+                <h3>MoodIndigo</h3>
+                <h3>시놉시스</h3>
+                <p>시놉 내용</p>
+                <h3>티저영상</h3>
+                <video></video>
+
+            </section>
+
+        </div>
 
 
 
@@ -71,8 +99,6 @@
 
 
 
-
-    <!-- 포스터 이미지 들어가는 쪽 -->
 
 
 
