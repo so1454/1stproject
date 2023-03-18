@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    color: #FFF;
+    /* width: 1700px; */
+    background-color: black;
+}
+
+div#wapper {
+    width: 100%;
+    text-align: left;      
+    min-height: 300px;
+    margin: 0 auto;
+}
+div#menu{
+    width : 1700px;
+    /* height: 300px; */
+    float : left;
+
+}
+
+
+header, footer, nav, aside, section {
+    border: 1px solid #999;
+    margin: 5px;
+    padding: 10px;
+}
+header {
+    height: 50px;
+    background-color: red;
+}
+nav, section, aside {
+    float: left;
+    height: 200px;
+}
+nav {
+    background-color: goldenrod;
+    width: 400px;
+}
+section {
+    background-color: green;	
+    width: 700px;
+}
+aside {
+    background-color: goldenrod;
+    width: 400px;
+}
+footer {
+    height: 50px;
+    background-color: blue;
+    position: relative;
+    clear: both;
+}
+article {
+    width: 90%;
+    margin: 20px;
+    background-color: #999;
+}
