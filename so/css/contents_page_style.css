@@ -1,0 +1,206 @@
+body {
+    background-color: black;
+    margin: 10px;
+
+}
+
+
+header {
+    height: 50px;
+    border-bottom: 1px solid white;
+    /*밑줄*/
+    display: flex;
+    /* 요소정렬 */
+    align-items: center;
+    /*가운데로 맞추기*/
+    margin-bottom: 10px;  /*대표이미지랑 거리두기*/
+}
+
+div.logo {
+    margin-left: 20px;
+}
+
+/* 머릿글 영화/TV쇼 커뮤니티*/
+nav.header-items {
+
+    display: flex;
+    /* 요소정렬 */
+    margin-left: 30px;
+    /* 왼쪽 여백 */
+    margin-right: 10px;
+    /* 오른쪽 여백 */
+    color: white;
+
+
+}
+
+
+/*각 각 카테고리*/
+li.header-item {
+    margin-left: 10px;
+    /* 사이 서로서로 떼주기  */
+
+    list-style: none;
+    /* 리스트 앞 점 제거*/
+
+    float: left;
+    white-space: nowrap;
+    /* 따로따로 안놀게해줌*/
+
+    display: block;
+    /*글자 클릭 아니고 주변 눌러도 클릭 되게 해줌*/
+    /* text-align: center; 글씨 정렬을 가운데로 설정 */
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    /*리스트 밑줄 제거*/
+}
+
+/* 검색, 로그인 버튼(모음) */
+div.Like_btn {
+    margin-left: auto;
+    /*자동으로 왼쪽을 여백으로 두겠다.*/
+    display: flex;
+
+}
+
+/*검색어를 입력해주세요 창*/
+span>input {
+    width: 200px;
+    height : 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+/*검색어를 입력해주세요 버튼 창*/
+button>img {
+    width: 20px;
+    height : 20px;
+}
+
+.search_btn {
+    /*오른쪽 로그인 버튼이랑 사이 똄*/
+    margin-right: 70px;
+    width : 300px;
+    display: flex;
+}
+
+#login_btn {
+    width: 80px;
+    height: 30px;
+}
+
+/*여기부터 메인*/
+
+main {
+    width :100%;
+    margin-left: 10px;
+}
+
+/*메인에 대표 포스터 이미지*/
+#top_img{
+    width : 100%;
+    height : 300px;
+}
+
+
+.background {
+    background-image: url(/so/img/무드이닏고.jfif);
+    background-size: cover;
+    width: 80%;
+    height: 300px;
+    /* align-items: end; */
+    display: block;
+    margin: auto;
+    justify-content: center;  /*이미지 가운데로*/
+}
+
+.background_blur{
+    background-image: url(/so/img/QHD\ 검은색\ 배경화면.jpg);
+    background-size: cover;
+    position :  relative;       /*대표이미지랑 겹치기*/
+    width : 100%;
+    height: 150px;
+    bottom: 50px;
+    filter: blur(10px);
+}
+
+.poster_img {
+    position : relative; /*대표이미지랑 겹치기*/
+    margin-left: 200px;
+    width: 300px;
+    height: 500px;
+    margin-top :50px
+
+}
+
+
+ 
+.information {
+    color : white;
+    
+    width : 300px;
+    height : 100px;
+    margin-top: 50px;
+    
+    font-size: 15pt;
+    list-style: none;
+    /* 리스트 앞 점 제거*/
+
+}
+
+.contents_wrap{
+    width : 1700px;
+    
+
+}
+
+
+#a{
+    float: left;
+}
+
+#b{
+    width : 50%;
+    float: left;
+    color : white;
+    position: relative;
+    margin-left: 100px;
+
+}
+
+
+
+.drag_drop {
+    margin: 0;
+    padding: 0;
+    background-color: #3d4e56fa;
+    display: flex;
+  }
+  
+  button.draggable {
+    width: 500px;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+    margin: 12px;
+    cursor: move;
+    font-size: 30px;
+    background: #eaeaea4f;
+  }
+  
+  div.container {
+    margin: 500px;
+    padding: 500px;
+    background-color: #b5c1dc57;
+    border-radius: 8px;
+  }
+  
+  .draggable.dragging {
+    opacity: 0.5;
+  }

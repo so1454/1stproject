@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/so/css/comunity_page_style.css">
+</head>
+
+<body>
+    <!-- header (머리 카테고리 있는 쪽)-->
+
+    <header>
+        <!-- <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> -->
+        <div class="logo">
+            <img src="/so/img/로고.png" alt="로고" width="100px">
+        </div>
+        <nav class="header-items">
+            <ul>
+                <li class="header-item"><a href="#">영화 </a></li>
+                <li class="header-item"><a href="#"> TV쇼 </a></li>
+                <li class="header-item"><a href="#"> 커뮤니티</a></li>
+            </ul>
+        </nav>
+
+
+
+        <div class="Like_btn">
+            <span class="search_btn">
+                <input type="text" placeholder="검색어 입력">
+
+                <button><img src="/so/img/search.png" alt="search" width="13px">
+                </button>
+            </span>
+
+            <button id="login_btn">로그인</button>
+
+        </div>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+
+        <!--상단 이미지-->
+        <section id="top_img">
+            <div class="background">
+            </div>
+            <div class="background_blur">
+            </div>
+        </section>
+
+
+        <div class = contents_wrap>
+
+            <div id = "title">
+                <fieldset>
+                    <h2>#연인 #재미 #낭만 #판타지</h2>
+                </fieldset>
+            </div>
+
+            <div id = "hashtag">
+                <select name="hashtag" >
+                    <option value="genre"> 
+                        장르
+                    </option>
+                    <option value="emotion"> 
+                        감정
+                    </option>
+                    <option value="age"> 
+                        연령
+
+                    </option>
+           </select>
+         
+           <div class = drag_drop>
+           <div class="container">
+            <button class="draggable" draggable="true">🦊</button>
+            <button class="draggable" draggable="true">🐸</button>
+        </div>
+        <div class="container">
+            <button class="draggable" draggable="true">🐶</button>
+            <button class="draggable" draggable="true">🐱</button>
+        </div>
+    </div>
+
+            <script>
+                const draggables = document.querySelectorAll(".draggable");
+                const containers = document.querySelectorAll(".container");
+                
+                draggables.forEach(draggable => {
+                  draggable.addEventListener("dragstart", () => {
+                    draggable.classList.add("dragging");
+                  });
+                
+                  draggable.addEventListener("dragend", () => {
+                    draggable.classList.remove("dragging");
+                  });
+                });
+                
+                containers.forEach(container => {
+                  container.addEventListener("dragover", e => {
+                    e.preventDefault();
+                    const afterElement = getDragAfterElement(container, e.clientX);
+                    const draggable = document.querySelector(".dragging");
+                    if (afterElement === undefined) {
+                      container.appendChild(draggable);
+                    } else {
+                      container.insertBefore(draggable, afterElement);
+                    }
+                  });
+                });
+                
+                function getDragAfterElement(container, x) {
+                  const draggableElements = [
+                    ...container.querySelectorAll(".draggable:not(.dragging)"),
+                  ];
+                
+                  return draggableElements.reduce(
+                    (closest, child) => {
+                      const box = child.getBoundingClientRect();
+                      const offset = x - box.left - box.width / 2;
+                      // console.log(offset);
+                      if (offset < 0 && offset > closest.offset) {
+                        return { offset: offset, element: child };
+                      } else {
+                        return closest;
+                      }
+                    },
+                    { offset: Number.NEGATIVE_INFINITY },
+                  ).element;
+                }
+                </script>
+
+                    
+
+
+
+            </div>
+            
+        </div>
+
+
+        
+
+
+    </main>
+
+
+    <footer>
+        <p>Copyright © 
+           <script>document.write(new Date().getFullYear());</script> 
+           OTT 영상 추천 사이트</p>
+     </footer>
+  
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
