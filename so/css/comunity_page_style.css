@@ -14,6 +14,7 @@ header {
     align-items: center;
     /*가운데로 맞추기*/
     margin-bottom: 10px;  /*대표이미지랑 거리두기*/
+    /* white-space: nowrap; */
 }
 
 div.logo {
@@ -21,7 +22,7 @@ div.logo {
 }
 
 /* 머릿글 영화/TV쇼 커뮤니티*/
-nav.header-items {
+.header-items {
 
     display: flex;
     /* 요소정렬 */
@@ -30,13 +31,14 @@ nav.header-items {
     margin-right: 10px;
     /* 오른쪽 여백 */
     color: white;
+    white-space: nowrap;
 
 
 }
 
 
 /*각 각 카테고리*/
-li.header-item {
+.header-item {
     margin-left: 10px;
     /* 사이 서로서로 떼주기  */
 
@@ -71,7 +73,9 @@ div.Like_btn {
 span>input {
     width: 200px;
     height : 10px;
-    border: 1px solid #bbb;
+
+    /*검색어 창 이쁘게 하기*/
+    border: 1px solid #bbb; 
     border-radius: 8px;
     padding: 10px 12px;
     font-size: 15px;
@@ -79,6 +83,7 @@ span>input {
 
 /*검색어를 입력해주세요 버튼 창*/
 button>img {
+    /*버튼창 크기 조절*/
     width: 20px;
     height : 20px;
 }
@@ -90,12 +95,15 @@ button>img {
     display: flex;
 }
 
+/* 로그인 버튼 */
 #login_btn {
+    /* 크기조절 */
     width: 80px;
     height: 30px;
 }
 
-
+/* ----------여기부터 메인------------- */
+/* 메인 전체 크기조절 */
 main {
     width :100%;
     margin-left: 10px;
@@ -108,16 +116,17 @@ main {
 }
 
 
+/* 배경 이미지 */
 .background {
-    background-image: url(/so/img/무드이닏고.jfif);
     background-size: cover;
-    width: 80%;
+    width: 100%;
     height: 300px;
     /* align-items: end; */
     display: block;
     margin: auto;
 }
 
+/* 배경 이미지 밑에 블러처리 */
 .background_blur{
     background-image: url(/so/img/QHD\ 검은색\ 배경화면.jpg);
     background-size: cover;
@@ -128,6 +137,7 @@ main {
     filter: blur(10px);
 }
 
+/* 왼쪽 부분 컨텐츠 감싸는 부분 */
 .contents_wrap{
     width: 90%;
     height: 1700px;
